@@ -1,0 +1,4 @@
+category: Devel
+requires: bash gawk autoconf2.1 autoconf2.5
+sdesc: "Wrapper scripts for autoconf commands"
+ldesc: "Wrapper scripts for autoconf commands"

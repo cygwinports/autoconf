@@ -1,15 +1,13 @@
 DESCRIPTION="Wrapper script for autoconf commands"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="http://sources.gentoo.org/viewcvs.py/*checkout*/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-${PV}.sh"
+PATCH_URI="2.62-ac2.5x.patch"
+
 SRC_DIR=.
 
-src_compile() {
-	:
-}
+src_compile() { :; }
 
-src_test() {
-	:
-}
+src_test() { :; }
 
 src_install() {
 	cd ${S}
