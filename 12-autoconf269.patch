@@ -1,0 +1,11 @@
+--- origsrc/ac-wrapper-12.sh	2013-03-10 20:37:06.984044700 -0500
++++ src/ac-wrapper-12.sh	2013-03-10 20:37:40.242947000 -0500
+@@ -79,7 +79,7 @@ fi
+ # Set up bindings between actual version and WANT_AUTOCONF;
+ # Start at last known stable to speed up lookup process.
+ #
+-STABLE_AUTOCONF="2.68:2.5"
++STABLE_AUTOCONF="2.69:2.5"
+ vers="${STABLE_AUTOCONF} 9999:2.5 $(printf '2.%s:2.5 ' `seq 99 -1 59`) 2.13:2.1"
+ 
+ binary=""

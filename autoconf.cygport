@@ -1,0 +1,23 @@
+NAME="autoconf"
+VERSION=12
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Wrapper script for autoconf commands"
+REQUIRES="autoconf2.1 autoconf2.5 gawk"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="http://sources.gentoo.org/viewcvs.py/*checkout*/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-${VERSION}.sh"
+SRC_DIR=.
+PATCH_URI="12-autoconf269.patch"
+
+src_compile() { :; }
+
+src_install() {
+	local prog
+
+	cd ${S}
+	newbin ac-wrapper-${VERSION}.sh autoconf
+	for prog in autoheader autom4te autoreconf autoscan autoupdate ifnames
+	do
+		dosym autoconf /usr/bin/${prog}
+	done
+}
